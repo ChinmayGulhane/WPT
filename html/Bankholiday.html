@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Holiday</title>
+
+    <script>
+        function f1() {
+            var d = new Date(document.getElementById("da").value);
+            console.log(d.getDay())
+            var cnt = d.getDay()
+            // var din = d.getDate()
+            var res
+            console.log(din)
+            if (cnt == 0 || cnt==6) {
+                document.getElementById("res").innerHTML= "Bank Holiday"
+            }
+            // if(cnt==6){
+            //     // if((din<=14 && din>=7) || (din=>21 && din<=28)){
+            //        res= "Bank Holiday"
+            //        console.log()
+            //     }
+            //     // else{
+            //         // res ="Work Day"
+            //     // }
+            // }
+            else{
+                res= "Work Day"
+            }
+           
+            document.getElementById("res").innerHTML=res
+        
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <pre>
+        Enter date:<input type="date" id="da" onblur="f1()">
+        <p id="res"></p>
+    
+    </pre>
+
+
+    
+</body>
+</html>

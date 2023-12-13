@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Formatting</title>
+    <script>
+        function f1(){
+            var inp = document.getElementById("in").value
+            var res
+            if (document.getElementById("UC").checked){
+                res= inp.toUpperCase()
+            }
+            if (document.getElementById("LC").checked){
+                res= inp.toLowerCase()
+            }
+            if (document.getElementById("TC").checked){
+                let x= inp.charAt(0)
+                console.log(x)
+                let a =x.toUpperCase()
+                console.log(a)
+                let y = inp.substring(1)
+                console.log(y)
+                let b=y.toLowerCase()
+                console.log(b)
+                res=a+b
+                console.log(res)
+            }
+            document.getElementById("op").innerHTML = res
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        Enter <input type="text" id="in">
+        Upper Case:<input type="radio" id="UC" name="abc" onclick="f1()">
+        Lower Case:<input type="radio" id="LC" name="abc" onclick="f1()">
+        Title Case:<input type="radio" id="TC" name="abc" onclick="f1()">
+        The result is :<span id="op"></span>
+    </pre>
+</body>
+</html>

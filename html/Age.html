@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+
+    <script>
+        function f1(){
+        let userin= document.getElementById("dob").value
+        var DOB = new Date(userin)
+        var today=new Date()
+        var b= today.getFullYear()
+        var a=DOB.getFullYear()
+        
+        var Age = b-a
+
+        var res= `the age is ${Age} years`
+        document.getElementById("Age").innerHTML=res
+        
+
+
+        }
+    </script>
+</head>
+<body align="center">
+    <pre>
+        Select Your date of birth:<br>
+        <input type="date" id="dob" onblur="f1()">
+        <br>
+        <span id="Age">asfgx</span>    
+    
+    </pre>
+
+</body>
+</html>

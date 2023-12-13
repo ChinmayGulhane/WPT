@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency</title>
+
+    <script>
+        function calculate() {
+            var x = (document.getElementById("num1")["value"])
+            var a = (document.getElementById("OP")["value"])
+            var b = (document.getElementById("OP1")["value"])
+            let result;   
+            if(a==1){
+                if (b==1)  result = x*1                  
+                if (b==2) result =x*0.012
+                if(b==3) result = x * 1.74
+            }
+            if(a==2){
+                if (b==1) result = x*83.43                 
+                if (b==2) result =x*1
+                if(b==3) result = x * 144.86
+            }
+            if(a==3){
+                if (b==1) result = x*0.58              
+                if (b==2) result =x*0.0069
+                if(b==3) result = x * 1
+            }
+        console.log(result );
+        let g ;
+        if(b==1) g= "&#x20B9;"
+        if(b==2) g= "&#x24;"
+        if(b==3) g= "&#xa5;"
+
+        let outputstr = `<i>${result}${g} </i>`
+        document.getElementById("sp1").innerHTML=outputstr
+    }
+    </script>
+</head>
+
+<body align="center">
+    <pre>
+    Enter Amount :<input type="number" id="num1" value="0">
+    Currency 1:<select id="OP">
+        <option>Select</option>
+        <option value="1">rupee  "&#x20B9;"</option>
+        <option value="2"> dollar "&#x24;"</option>
+        <option value="3"> yen "&#xa5;"</option>
+    </select>
+
+    Currency 2:<select  id="OP1" onchange="calculate()">
+        <option>Select</option>
+        <option value="1"> rupee  "&#x20B9;"</option>
+        <option value="2"> dollar "&#x24;"</option>
+        <option value="3"> yen "&#xa5;"</option>
+    </select>
+
+    <p>The result is <span id="sp1"> </span></p>
+    </pre>
+
+</body>
+</html>
+
+
