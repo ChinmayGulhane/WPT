@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            // function f1(){
+            $().ready(()=>{
+                let sum = 0;
+                $("#d").blur(()=>{
+                // $("p").text("")
+                $("#d").each((i,e)=>{
+                    let ele = parseInt(e.value)
+                    sum= sum+ele
+                    console.log(sum)
+                    $("p").append(sum+" ")
+
+            })
+             $("p").html(`<i>${sum}</i>`)
+            })
+            })
+        // }
+        </script>
+    </head>
+
+    <body>
+        Enter number: <input type="number" id="d" ><br>
+
+        Sum is:<p></p>
+    </body>
+</html>

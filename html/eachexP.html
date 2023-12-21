@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+                $(".v").change(()=>{
+                    $("p").text("")
+                $(".v").each((i,ele)=>{
+                    console.log(i,ele,ele.value,ele.checked)
+                    if(ele.checked)
+                        $("p").append(ele.value+" ")
+                })    
+                })
+            })
+        </script>
+    </head>
+    <body>
+        Tom: <input type="checkbox" class="v" value="tom"/>
+        Jerry: <input type="checkbox" class="v" value="jerry"/>
+        Oggy: <input type="checkbox" class="v" value="oggy"/>
+    <p></p>
+    </body>
+
+</html>
