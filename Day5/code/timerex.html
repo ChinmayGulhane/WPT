@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script>
+        let intervalId
+        let cnt=0
+        function start()
+        {   
+            intervalId=setInterval(()=>{
+                    cnt++
+                document.getElementById("p1").innerHTML=`<b>${cnt}</b>`
+            } ,1000)
+        }
+        function stop()
+        {
+            clearInterval(intervalId)
+        }
+        function reset(){
+            cnt=0;
+            document.getElementById("p1").innerHTML=` <b>${cnt}</b>`
+        }
+    </script>
+</head>
+
+
+<body>
+    <div>
+        <p><input type="button" value="start" onclick="start()"/></p>
+        <p id="p1">0</p>
+        <p><input type="button" value="stop" onclick="stop()"/></p>
+        <p><input type="button" value="reset" onclick="reset()"/></p>
+    </div>
+
+
+</body>
+</html>
